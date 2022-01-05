@@ -18,18 +18,24 @@ class _drawerrState extends State<drawerr> {
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: <Widget>[
-          UserAccountsDrawerHeader(
-            accountName: Text("Alpha House"),
-            accountEmail: Text("alphahouse@gmail.com"),
-            currentAccountPicture: CircleAvatar(
-              backgroundColor: Colors.orange,
-              child: Text(
-                "A",
-                style: TextStyle(fontSize: 40.0),
+           DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
               ),
+              child: Column(
+                children: [
+                  Text('Alpha House',
+                  style: TextStyle(
+                    fontSize: 25,
+                  ),
+                  ),
+                  Icon(Icons.garage,size: 100,),
+                  
+                ],
+              ),
+              
             ),
-          ),
-//support
+//support part
           ListTile(
             leading: Icon(Icons.support),
             title: Text("Support"),
