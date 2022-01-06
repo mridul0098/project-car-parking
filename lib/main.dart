@@ -3,9 +3,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:project_car_parking/login%20page.dart';
-import './home.dart';
-import './add parking place.dart';
-import './locations.dart';
+import './home page.dart';
+import './add parking place page.dart';
+import './locations page.dart';
 import './drawer.dart';
 import './login page.dart';
 
