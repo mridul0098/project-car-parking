@@ -2,10 +2,12 @@ import 'dart:html';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:project_car_parking/login%20page.dart';
 import './home.dart';
-import './profile.dart';
+import './add parking place.dart';
 import './locations.dart';
 import './drawer.dart';
+import './login page.dart';
 
 void main() {
   runApp(
@@ -44,14 +46,14 @@ class _MyAppState extends State<MyApp> {
                   "Alpha House",
                   style: TextStyle(fontSize: 25),
                 ),
-                Text(
+               /* Text(
                   "Car Parking App",
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
-                    letterSpacing: 3,
-                    wordSpacing: 4,
+                     // letterSpacing: 3,
+                     // wordSpacing: 4,
                   ),
-                ),
+                ), */
               ],
             ),
             centerTitle: true,
@@ -74,15 +76,15 @@ class _MyAppState extends State<MyApp> {
               tabs: [
                 Tab(
                   icon: Icon(Icons.home),
-                  text: "home",
+                  text: "Home",
                 ),
                 Tab(
                   icon: Icon(Icons.location_searching),
-                  text: "location",
+                  text: "Location",
                 ),
                 Tab(
                   icon: Icon(Icons.add),
-                  text: "add profile",
+                  text: "Add Parking Place",
                 ),
               ],
             ),
@@ -96,8 +98,9 @@ class _MyAppState extends State<MyApp> {
 
               locations(),
 
-//profile page
-              profile(),
+//AddparkingPlace page
+             loginpage(),
+            
             ],
           ),
         ),

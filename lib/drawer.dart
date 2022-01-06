@@ -18,26 +18,28 @@ class _drawerrState extends State<drawerr> {
         // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: <Widget>[
-           DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Column(
-                children: [
-                  Text('Alpha House',
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Column(
+              children: [
+                Text(
+                  'Alpha House',
                   style: TextStyle(
                     fontSize: 25,
                   ),
-                  ),
-                  Icon(Icons.garage,size: 100,),
-                  
-                ],
-              ),
-              
+                ),
+                Icon(
+                  Icons.garage,
+                  size: 100,
+                ),
+              ],
             ),
+          ),
 //support part
           ListTile(
-            leading: Icon(Icons.support),
+            leading: Icon(Icons.help_center),
             title: Text("Support"),
             onTap: () {
               Navigator.push(
@@ -87,8 +89,6 @@ class _drawerrState extends State<drawerr> {
   }
 }
 
-//support page design
-
 class support extends StatefulWidget {
   @override
   _about_appsState createState() => _about_appsState();
@@ -102,8 +102,23 @@ class _about_appsState extends State<support> {
       home: Center(
         child: Scaffold(
           backgroundColor: Colors.grey[700],
+//support page design
+
           appBar: AppBar(
-            title: Text("support"),
+            title: Row(
+              children: [
+                IconButton(
+                  onPressed: () {
+                    setState(() {
+                      Navigator.pop(context);
+                    });
+                  },
+                  icon: Icon(Icons.arrow_back),
+                ),
+
+                Text("    support"),
+              ],
+            ),
             centerTitle: true,
           ),
           body: Center(
@@ -165,7 +180,20 @@ class _aboutState extends State<about> {
         child: Scaffold(
           backgroundColor: Colors.grey[700],
           appBar: AppBar(
-            title: Text("About"),
+            title: Row(
+              children: [
+                 IconButton(
+                  onPressed: () {
+                    setState(() {
+                      Navigator.pop(context);
+                    });
+                  },
+                  icon: Icon(Icons.arrow_back),
+                ),
+
+                Text("   About"),
+              ],
+            ),
             centerTitle: true,
           ),
           body: Center(
@@ -209,7 +237,21 @@ class _settingState extends State<setting> {
         child: Scaffold(
           backgroundColor: Colors.grey[700],
           appBar: AppBar(
-            title: Text("Setting"),
+            title: Row(
+              children: [
+
+                 IconButton(
+                  onPressed: () {
+                    setState(() {
+                      Navigator.pop(context);
+                    });
+                  },
+                  icon: Icon(Icons.arrow_back),
+                ),
+
+                Text("   Setting"),
+              ],
+            ),
             centerTitle: true,
           ),
           body: Container(
